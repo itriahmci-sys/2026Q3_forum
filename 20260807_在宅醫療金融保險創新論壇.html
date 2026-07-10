@@ -148,6 +148,7 @@ img{display:block;max-width:100%;}
 .hero-cta{
   margin-top:44px;
   display:flex;
+  align-items:center;
   gap:16px;
   flex-wrap:wrap;
 }
@@ -167,7 +168,18 @@ img{display:block;max-width:100%;}
 .btn-primary:hover{background:var(--copper-dark);}
 .btn-ghost{border-color:var(--text-soft);color:var(--text);}
 .btn-ghost:hover{border-color:var(--text);}
-#shareBtn{display:inline-flex;align-items:center;gap:8px;font-family:inherit;background:transparent;}
+.share-cluster{display:inline-flex;align-items:center;gap:10px;margin-left:4px;}
+.share-label{font-size:13px;color:var(--text-soft);margin-right:2px;}
+.icon-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;
+  border:0.5px solid var(--text-soft);
+  color:var(--text);
+  background:transparent;
+  cursor:pointer;
+  text-decoration:none;
+}
+.icon-btn:hover{border-color:var(--text);background:var(--parchment-2);}
 .toast{
   position:fixed;
   left:50%;
@@ -362,10 +374,18 @@ footer{
     <div class="hero-cta">
       <a class="btn btn-primary" href="https://forms.gle/aqzinNGcUGNXh64o6" target="_blank" rel="noopener">立即報名</a>
       <a class="btn btn-ghost" href="#agenda">查看議程</a>
-      <button class="btn btn-ghost" id="shareBtn" type="button">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line></svg>
-        分享論壇
-      </button>
+      <div class="share-cluster">
+        <span class="share-label">分享</span>
+        <a class="icon-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fitriahmci-sys.github.io%2F2026Q3_forum%2F" target="_blank" rel="noopener" aria-label="分享到 Facebook">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fitriahmci-sys.github.io%2F2026Q3_forum%2F&text=%E6%89%93%E7%A0%B4%E9%86%AB%E9%99%A2%E7%9A%84%E5%9C%8D%E7%89%86%EF%BD%9C%E5%9C%A8%E5%AE%85%E9%86%AB%E7%99%82%E9%87%91%E8%9E%8D%E4%BF%9D%E9%9A%AA%E5%89%B5%E6%96%B0%E8%AB%96%E5%A3%87" target="_blank" rel="noopener" aria-label="分享到 LINE">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.24c0 4.08 3.54 7.5 8.33 8.15.32.07.77.22.88.5.1.26.07.66.03.92l-.14.85c-.04.26-.2 1 .88.55 1.07-.46 5.78-3.4 7.89-5.83C21.4 13.63 22 12 22 10.24 22 5.69 17.52 2 12 2zM8.5 12.9H7c-.19 0-.35-.15-.35-.35V8.6c0-.19.16-.34.35-.34s.35.15.35.34v3.6h1.15c.2 0 .35.16.35.35s-.15.35-.35.35zm1.65-.35c0 .19-.16.35-.35.35s-.35-.16-.35-.35V8.6c0-.19.16-.34.35-.34s.35.15.35.34zm4.4 0c0 .15-.1.28-.24.33a.34.34 0 0 1-.13.02.35.35 0 0 1-.28-.14l-1.87-2.54v2.33c0 .19-.15.35-.35.35s-.34-.16-.34-.35V8.6c0-.15.1-.28.24-.33a.33.33 0 0 1 .38.12l1.87 2.54V8.6c0-.19.15-.34.34-.34s.35.15.35.34zm2.9-2.6h-1.15v.9h1.15c.19 0 .34.15.34.35s-.15.35-.34.35h-1.15v.9h1.15c.19 0 .34.15.34.35s-.15.35-.34.35h-1.5c-.19 0-.34-.16-.34-.35V8.6c0-.19.15-.34.34-.34h1.5c.19 0 .34.15.34.34s-.15.35-.34.35z"/></svg>
+        </a>
+        <button class="icon-btn" id="shareBtn" type="button" aria-label="複製連結或分享">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line></svg>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -561,7 +581,7 @@ footer{
   var shareData = {
     title: '打破醫院的圍牆｜在宅醫療金融保險創新論壇',
     text: '健康樂活與智慧醫療照護聯盟 2026 年第三季論壇，8/7 台北世貿一館，一起討論在宅醫療的保險與風險管理新模式。',
-    url: window.location.href
+    url: 'https://itriahmci-sys.github.io/2026Q3_forum/'
   };
   function showToast(msg){
     toast.textContent = msg;
