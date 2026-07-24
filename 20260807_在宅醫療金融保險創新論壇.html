@@ -461,7 +461,7 @@ footer{
       <div class="agenda-body">
         <span class="tag tag-insurance">演講 4・保險</span>
         <p class="agenda-topic">在宅醫療與健康風險管理生態圈（暫）</p>
-        <p class="agenda-speaker">南山人壽　王保勲 協理</p>
+        <p class="agenda-speaker">南山人壽　王保勲 資深協理</p>
       </div>
     </div>
 
